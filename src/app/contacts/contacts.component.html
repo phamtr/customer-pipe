@@ -1,0 +1,7 @@
+<input [(ngModel)]="nhom2" placeholder="search text goes here">
+<ul>
+  <li *ngFor="let c of characters | filter : nhom2">
+    {{c}}
+  </li>
+</ul>
+

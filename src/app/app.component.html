@@ -1,0 +1,23 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+
+  <div *ngFor="let i of info | keys">
+    <p *ngIf="i.key != 'urls'">{{ i.key }}: {{ i.value }}</p>
+    <div *ngIf="i.key == 'urls'">
+        <p>urls:</p>
+        <ul>
+            <li *ngFor="let url of i.value">
+                {{ url }}
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+  <a routerLink="/group">Group</a> 
+  <a routerLink="/contacts">Contacts</a>
+
+<router-outlet></router-outlet>
